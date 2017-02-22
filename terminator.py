@@ -25,8 +25,7 @@ MIN=60
 def check(path):
 	last_mod = os.path.getmtime(path)
 	curr = time.time()	
-	with open(FNAME) as fid:
-		t = fid.readline()				
+	with open(FNAME) as fid: t = fid.readline()				
 	timer = float(t)*HOUR
 	delta = last_mod + timer - curr		
 	if delta > 0:
